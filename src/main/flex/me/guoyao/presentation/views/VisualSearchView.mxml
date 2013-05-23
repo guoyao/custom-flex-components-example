@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+					  xmlns:s="library://ns.adobe.com/flex/spark"
+					  xmlns:mx="library://ns.adobe.com/flex/mx"
+					  xmlns:components="me.guoyao.components.*"
+					  xmlns:models="me.guoyao.models.*"
+					  width="100%"
+					  height="100%"
+					  color="#ffffff"
+					  backgroundColor="#180153"
+					  creationComplete="init()">
+	<fx:Declarations>
+		<s:ArrayCollection id="list">
+			<fx:Array>
+				<models:VisualSearchLabelItem label="时间" value="time">
+					<s:ArrayCollection>
+						<models:SelectAbleItem label="Time Item 1"/>
+						<models:SelectAbleItem label="Time Item 2"/>
+						<models:SelectAbleItem label="Time Item 3"/>
+						<models:SelectAbleItem label="Time Item 4"/>
+						<models:SelectAbleItem label="Time Item 5"/>
+					</s:ArrayCollection>
+				</models:VisualSearchLabelItem>
+				<models:VisualSearchLabelItem label="类别" value="category" multiSelectAble="true">
+					<s:ArrayCollection>
+						<models:SelectAbleItem label="Category Item 1"/>
+						<models:SelectAbleItem label="Category Item 2"/>
+						<models:SelectAbleItem label="Category Item 3"/>
+						<models:SelectAbleItem label="Category Item 4"/>
+						<models:SelectAbleItem label="Category Item 5"/>
+						<models:SelectAbleItem label="Category Item 6"/>
+						<models:SelectAbleItem label="Category Item 7"/>
+						<models:SelectAbleItem label="Category Item 8"/>
+						<models:SelectAbleItem label="Category Item 9"/>
+						<models:SelectAbleItem label="Category Item 10"/>
+						<models:SelectAbleItem label="Category Item 11"/>
+						<models:SelectAbleItem label="Category Item 12"/>
+						<models:SelectAbleItem label="Category Item 13"/>
+						<models:SelectAbleItem label="Category Item 14"/>
+						<models:SelectAbleItem label="Category Item 15"/>
+						<models:SelectAbleItem label="Category Item 16"/>
+						<models:SelectAbleItem label="Category Item 17"/>
+						<models:SelectAbleItem label="Category Item 18"/>
+						<models:SelectAbleItem label="Category Item 19"/>
+						<models:SelectAbleItem label="Category Item 20"/>
+					</s:ArrayCollection>
+				</models:VisualSearchLabelItem>
+				<models:VisualSearchLabelItem label="品类组" value="classgroup">
+					<s:ArrayCollection>
+						<models:SelectAbleItem label="Classgroup Item 1"/>
+						<models:SelectAbleItem label="Classgroup Item 2"/>
+						<models:SelectAbleItem label="Classgroup Item 3"/>
+						<models:SelectAbleItem label="Classgroup Item 4"/>
+						<models:SelectAbleItem label="Classgroup Item 5"/>
+					</s:ArrayCollection>
+				</models:VisualSearchLabelItem>
+				<models:VisualSearchLabelItem label="地区" value="district">
+					<s:ArrayCollection>
+						<models:SelectAbleItem label="District Item 1"/>
+						<models:SelectAbleItem label="District Item 2"/>
+						<models:SelectAbleItem label="District Item 3"/>
+						<models:SelectAbleItem label="District Item 4"/>
+						<models:SelectAbleItem label="District Item 5"/>
+					</s:ArrayCollection>
+				</models:VisualSearchLabelItem>
+				<models:VisualSearchLabelItem label="业态" value="operation">
+					<s:ArrayCollection>
+						<models:SelectAbleItem label="Operation Item 1"/>
+						<models:SelectAbleItem label="Operation Item 2"/>
+						<models:SelectAbleItem label="Operation Item 3"/>
+						<models:SelectAbleItem label="Operation Item 4"/>
+						<models:SelectAbleItem label="Operation Item 5"/>
+					</s:ArrayCollection>
+				</models:VisualSearchLabelItem>
+			</fx:Array>
+		</s:ArrayCollection>
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.core.IVisualElement;
+			
+			private function init():void
+			{
+				
+			}
+		]]>
+	</fx:Script>
+	<s:layout>
+		<s:VerticalLayout paddingLeft="10"
+						  paddingRight="10"
+						  paddingTop="10"
+						  paddingBottom="10"/>
+	</s:layout>
+	
+	<components:VisualSearch id="visualSearch"
+							 width="100%"
+							 labelField="label"
+							 dataProvider="{list}"/>
+</s:SkinnableContainer>
